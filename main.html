@@ -2,16 +2,90 @@
 <html>
 
 <head>
-    <title>Main</title>
+    <title>Cadastro</title>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="formulario.css" media="screen">
 </head>
 
 <body>
-    <form method="get">        
-        <input type="text" name="variavel">
+    
+    <div>
+        <h1 id="titulo">Tela de Cadastro</h1>
+        <p id="subtitulo">Insira seus dados</p>
+        <br>
+    </div>
+
+    <form>
+        <fieldset class="grupo">
+            <div>
+                <label for="nome"><strong>Nome:</strong></label>
+                <input type="text" name="nome"  id="nome" placeholder="Seu Nome" required>
+            </div>
+            <div>
+                <label for="sobrenome"><strong>Sobrenome:</strong></label>
+                <input type="text" name="sobrenome" id="sobrenome" placeholder="Seu Sobrenome" required>
+            </div>
+        </fieldset>
+
+        <div class="campo">
+            <label for="email"><strong>Email:</strong></label>
+            <input type="email" name="email" id="email" placeholder="SeuEmail@exemplo.com" required>
+        </div>
+
+        <div class="campo">
+            <label>De que lado você desenvolve?</label>
+            <label>
+            <input type="radio" name="devWeb" value="frontend"> Front-End
+            </label>
+            <label>
+                <input type="radio" name="devWeb" value="backend"> Back-End
+            <label>
+            <label>
+                <input type="radio" name="devWeb" value="fullstack"> Full-Stack
+            <label>
+        </div>
+
+        <div class="campo">
+            <label>Selecione o seu nivel de senioridade!</label>
+            <label>
+                <select id="senioridade">
+                    <option selected disabled value="">Selecione</option>
+                    <option>Junior</option>
+                    <option>Pleno</option>
+                    <option>Sênior</option>
+                </select>
+            </label>
+        </div>
+
+        <fieldset class="grupo">
+            <input type="checkbox" id="tecnologia1" name="tecnologia1" value="HTML">
+            <label for="tecnologia1">HTML</label>
+            <input type="checkbox" id="tecnologia2" name="tecnologia2" value="CSS">
+            <label for="tecnologia2">CSS</label>
+            <input type="checkbox" id="tecnologia3" name="tecnologia3" value="Java">
+            <label for="tecnologia3">Java</label>
+            <input type="checkbox" id="tecnologia4" name="tecnologia4" value="C#">
+            <label for="tecnologia4">C#</label>
+            <input type="checkbox" id="tecnologia5" name="tecnologia5" value="C++">
+            <label for="tecnologia5">C++</label>
+            <input type="checkbox" id="tecnologia6" name="tecnologia6" value="GDScript">
+            <label for="tecnologia6">GDScript</label>
+        </fieldset>
+
+        <div class="campo">
+            <br>
+            <label>Conte um pouco da sua experiência:</label>
+            <textarea rows="6" style="width: 26em" id="experiencia" name="experiencia"></textarea>
+        </div>
+
+
+        <button type="reset">Resetar</button>
+        <button type="submit">Enviar</button>
+
+
     </form>
 
-    <p>Apenas um paragrafo!</p>
+    
 
 </body>
 
